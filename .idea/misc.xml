@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/drawable/favorite.xml" value="0.2203125" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/drawable/ic_arrow_drop_down.xml" value="0.2203125" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/drawable/like_selector.xml" value="0.2203125" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/drawable/rectangle_1.xml" value="0.2203125" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/drawable/she_rlar_va_smslar.xml" value="0.2203125" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/drawable/spinnerdesign.xml" value="0.2203125" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/layout/fragment_second.xml" value="0.20416666666666666" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/layout/fragment_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/layout/fragment_third.xml" value="0.20416666666666666" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/layout/item_bottom_sheet.xml" value="0.33" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/layout/item_poems.xml" value="0.5" />
+        <entry key="..\:/Codial/Project/Poems/app/src/main/res/layout/item_spinner.xml" value="0.5" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

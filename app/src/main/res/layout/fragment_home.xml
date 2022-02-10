@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F7F7F7"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/tv_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text="SMS"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_sherlar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_sms"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp"
+        android:text="SHE'RLAR"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/image_add"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintTop_toTopOf="@id/tv_sms"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sherlar"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="16dp"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ly_cons"
+        app:layout_constraintTop_toBottomOf="@id/tv_sherlar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_barchasi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/card_saqlanganlar"
+            android:outlineSpotShadowColor="#F8C500"
+            android:outlineAmbientShadowColor="#F8C500"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="48dp"
+            android:layout_marginEnd="8dp"
+            app:cardElevation="25dp"
+            app:cardCornerRadius="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F8C500">
+
+                <ImageView
+                    android:id="@+id/image_ic_hammasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/ic_hammasi"
+                    android:layout_margin="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_hammasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/image_ic_hammasi"
+                    android:textColor="#B99303"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="Barchasi"
+                    android:layout_margin="8dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_hammasiSoni"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_hammasiTa"
+                    android:gravity="right"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:textStyle="bold"
+                    android:text="122"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_hammasiTa"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tv_hammasiSoni"
+                    android:gravity="left"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:textStyle="bold"
+                    android:text="ta"
+                    android:textColor="#B99303"
+                    android:textSize="25sp"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/card_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/card_barchasi"
+            app:layout_constraintBottom_toBottomOf="@id/card_barchasi"
+            app:layout_constraintLeft_toLeftOf="@id/card_barchasi"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:layout_marginStart="16dp"
+            app:cardElevation="25dp"
+            app:cardCornerRadius="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="ALL"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_saqlanganlar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/card_barchasi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:outlineAmbientShadowColor="#EA1655"
+            android:outlineSpotShadowColor="#EA1655"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="48dp"
+            android:layout_marginStart="8dp"
+            app:cardElevation="25dp"
+            app:cardCornerRadius="8dp"
+            tools:ignore="UnusedAttribute">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EA1655">
+
+                <ImageView
+                    android:id="@+id/image_ic_saqlanganlar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/ic_saqlanganlar"
+                    android:layout_margin="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_saqlanganlar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/image_ic_saqlanganlar"
+                    android:textColor="#FFA6B6"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="Saqlanganlar"
+                    android:layout_margin="8dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_saqlanganlarSoni"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_saqlanganlarTa"
+                    android:gravity="right"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:textStyle="bold"
+                    android:text="5"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/tv_saqlanganlarTa"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tv_saqlanganlarSoni"
+                    android:gravity="left"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:textStyle="bold"
+                    android:text="ta"
+                    android:textColor="#FFA6B6"
+                    android:textSize="25sp"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/card_saqlanganlar"
+            app:layout_constraintBottom_toBottomOf="@id/card_saqlanganlar"
+            app:layout_constraintLeft_toLeftOf="@id/card_saqlanganlar"
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            android:layout_marginStart="16dp"
+            app:cardElevation="25dp"
+            app:cardCornerRadius="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="LIKE"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_sevgiSherlari"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ly_cons"
+        app:layout_constraintBottom_toTopOf="@id/card_tabrikSherlari"
+        app:layout_constraintRight_toLeftOf="@id/card_soginchArmon"
+        app:cardCornerRadius="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_ic_lives"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/_03_lives"/>
+
+            <TextView
+                android:id="@+id/tv_sevgiSherlari"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textColor="#6A6A6A"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="1dp"
+                android:text="Sevgi she'rlari"
+                app:layout_constraintTop_toBottomOf="@id/image_ic_lives"
+                app:layout_constraintRight_toRightOf="@id/image_ic_lives"
+                app:layout_constraintLeft_toLeftOf="@id/image_ic_lives"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_soginchArmon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ly_cons"
+        app:layout_constraintBottom_toTopOf="@id/card_otaonaArmon"
+        app:layout_constraintLeft_toRightOf="@id/card_sevgiSherlari"
+        app:cardCornerRadius="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_ic_ace"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/_02_ace"/>
+
+            <TextView
+                android:id="@+id/tv_soginchArmon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#6A6A6A"
+                android:textSize="15sp"
+                android:layout_marginTop="1dp"
+                android:textStyle="bold"
+                android:text="Sog'inch armon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_ic_ace"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_tabrikSherlari"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/card_sevgiSherlari"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/card_dostlikSherlari"
+        app:layout_constraintRight_toLeftOf="@id/card_otaonaArmon"
+        app:cardCornerRadius="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_ic_message"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/_06_message"/>
+
+            <TextView
+                android:id="@+id/tv_tabrikSherlari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#6A6A6A"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="1dp"
+                android:text="Tabrik she'rlar"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_ic_message"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_otaonaArmon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/card_soginchArmon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/card_hazilSherlar"
+        app:layout_constraintLeft_toRightOf="@id/card_tabrikSherlari"
+        app:cardCornerRadius="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_ic_home"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/_05_home"/>
+
+            <TextView
+                android:id="@+id/tv_otaona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#6A6A6A"
+                android:textSize="15sp"
+                android:layout_marginTop="1dp"
+                android:textStyle="bold"
+                android:text="Ota-Ona haqida"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_ic_home"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_hazilSherlar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/card_otaonaArmon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/card_dostlikSherlari"
+        app:cardCornerRadius="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_ic_flower"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/_01_flower"/>
+
+            <TextView
+                android:id="@+id/tv_hazil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#6A6A6A"
+                android:textSize="15sp"
+                android:layout_marginTop="1dp"
+                android:textStyle="bold"
+                android:text="Hazil she'rlar"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_ic_flower"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_dostlikSherlari"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/card_tabrikSherlari"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/card_hazilSherlar"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_ic_sports"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/_04_e_sports"/>
+
+            <TextView
+                android:id="@+id/tv_dostlikSherlari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#6A6A6A"
+                android:textSize="15sp"
+                android:layout_marginTop="1dp"
+                android:textStyle="bold"
+                android:text="Do'stlik she'rlar"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_ic_sports"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
